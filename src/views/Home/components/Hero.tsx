@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import { Link } from 'react-router-dom'
-import { Flex, Heading, Button } from '@pancakeswap/uikit'
+import { Flex, Heading, Button, Text } from '@pancakeswap/uikit'
 import { useWeb3React } from '@web3-react/core'
 import { useTranslation } from 'contexts/Localization'
 import ConnectWalletButton from 'components/ConnectWalletButton'
@@ -26,6 +26,22 @@ const HeaderSection = styled.div`
 const MainLogoSection = styled.div`
 
 `
+const BottomSlide = styled.div`
+
+`
+
+const CustomFontText = styled(Text)`
+  font-family: Glue Gun;
+  font-style: normal;
+  font-weight: normal;
+  font-size: ${({ fontSize }) => fontSize || '24px'};
+  line-height: 28px;
+  letter-spacing: 0.07em;
+  color: white;
+  text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000,
+    -1px 1px 0 #000;
+`
+
 
 const Hero = () => {
   const { t } = useTranslation()
@@ -52,16 +68,16 @@ const Hero = () => {
           </Flex>
           <Flex flex={1} flexDirection="row" justifyContent="center" alignItems="center">
             <Flex flex={1} justifyContent="center" alignItems="center">
-              <img src="/images/home/menu/marketplace.png" alt="Marketplace" />
+              <CustomFontText>MARKETPLACE</CustomFontText>
             </Flex>
             <Flex flex={1} justifyContent="center" alignItems="center">
-              <img src="/images/home/menu/Staking.png" alt="Staking" />
+              <CustomFontText>STAKING</CustomFontText>
             </Flex>
             <Flex flex={1} justifyContent="center" alignItems="center">
-              <img src="/images/home/menu/Whitepaper.png" alt="Whitepaper" />
+              <CustomFontText>WHITEPAPER</CustomFontText>
             </Flex>
             <Flex flex={1} justifyContent="center" alignItems="center">
-              <img src="/images/home/menu/play-now.png" alt="Play now" />
+              <CustomFontText>PLAY NOW</CustomFontText>
             </Flex>
             <Flex flex={1} justifyContent="center" alignItems="center">
               {!account ? (
@@ -76,11 +92,20 @@ const Hero = () => {
         </Flex>
       </HeaderSection>
       <MainLogoSection>
-        <Flex justifyContent='center'>
-          <img src="/images/home/phoenix.png" width={560} alt='Phoenix'/>
+        <Flex justifyContent="center">
+          <img src="/images/home/phoenix.png" width="35%" alt="Phoenix" />
         </Flex>
-        <Flex justifyContent='center'>
-          <img src="/images/home/game-name.png" width={1000} alt='Monster'/>
+        <Flex justifyContent="center" mt={32}>
+          <img src="/images/home/game-name.png" width="50%" alt="Monster" />
+        </Flex>
+        <Flex justifyContent="center" mt={32}>
+          <img src="/images/home/play-button.png" width={280} alt="Play now" />
+        </Flex>
+        <Flex justifyContent="center" mt={32} mb={32}>
+          <CustomFontText fontSize='48px'>CHARACTERS</CustomFontText>
+        </Flex>
+        <Flex justifyContent="center">
+          <img src="/images/home/horse/Grayhorse_Trans_1.png" width={280} alt="Grayhorse Trans" />
         </Flex>
       </MainLogoSection>
     </IntroBackground>

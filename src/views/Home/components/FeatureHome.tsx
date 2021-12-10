@@ -60,12 +60,43 @@ const FeatureBackground = styled.div`
   background-size: cover;
 `
 
+const HeaderSection = styled.div``
+
 const FeatureHome = () => {
   const { t } = useTranslation()
   const { account } = useWeb3React()
   const { theme } = useTheme()
 
-  return <FeatureBackground>Hello home 2</FeatureBackground>
+  return (
+    <FeatureBackground>
+      <HeaderSection>
+        <Flex
+          flexDirection="row"
+          justifyContent="center"
+          alignItems="center"
+          maxWidth={1200}
+          alignSelf="center"
+          margin="auto"
+          pt={24}
+        >
+          <Flex flex={1} flexDirection="row" justifyContent="center" alignItems="center">
+            <Flex flex={1} justifyContent="center" alignItems="center">
+              <img src="/images/home/menu/marketplace.png" alt="Marketplace" />
+            </Flex>
+            <Flex flex={1} justifyContent="center" alignItems="center">
+              <img src="/images/home/menu/Staking.png" alt="Staking" />
+            </Flex>
+            <Flex flex={1} justifyContent="center" alignItems="center">
+              <img src="/images/home/menu/Whitepaper.png" alt="Whitepaper" />
+            </Flex>
+            <Flex flex={1} justifyContent="center" alignItems="center">
+              <img src="/images/home/menu/play-now.png" alt="Play now" />
+            </Flex>
+          </Flex>
+        </Flex>
+      </HeaderSection>
+    </FeatureBackground>
+  )
 }
 
 export default FeatureHome
