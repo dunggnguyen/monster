@@ -59,36 +59,6 @@ const Home: React.FC = () => {
       <StyledHeroSection>
         <FeatureHome />
       </StyledHeroSection>
-      <PageSection
-        innerProps={{ style: { margin: '0', width: '100%' } }}
-        index={2}
-        hasCurvedDivider={false}
-      >
-        {/* <MetricsSection /> */}
-      </PageSection>
-      <PageSection
-        innerProps={{ style: HomeSectionContainerStyles }}
-        index={2}
-        hasCurvedDivider={false}
-      >
-        {/* <WinSection /> */}
-      </PageSection>
-      <PageSection
-        innerProps={{ style: HomeSectionContainerStyles }}
-        index={2}
-        hasCurvedDivider={false}
-      >
-        {/* <SalesSection {...cakeSectionData} />
-        <CakeDataRow /> */}
-      </PageSection>
-      <PageSection
-        innerProps={{ style: HomeSectionContainerStyles }}
-        background="linear-gradient(180deg, #7645D9 0%, #5121B1 100%)"
-        index={2}
-        hasCurvedDivider={false}
-      >
-        <Footer />
-      </PageSection>
     </>
   )
 }
