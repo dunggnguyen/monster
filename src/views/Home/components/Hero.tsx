@@ -11,6 +11,7 @@ import truncateHash from 'utils/truncateHash'
 import useAuth from 'hooks/useAuth'
 import { SlideSvgDark, SlideSvgLight } from './SlideSvg'
 import CompositeImage, { getSrcSet, CompositeImageProps } from './CompositeImage'
+import SwiperCharacter from './Swiper/SwiperCharacters'
 
 
 const IntroBackground = styled.div`
@@ -21,10 +22,12 @@ const IntroBackground = styled.div`
 `
 
 const HeaderSection = styled.div`
-
+  max-width: 1200px;
+  margin: auto;
 `
 const MainLogoSection = styled.div`
-
+  max-width: 1200px;
+  margin: auto;
 `
 const BottomSlide = styled.div`
 
@@ -91,7 +94,7 @@ const Hero = () => {
           </Flex>
         </Flex>
       </HeaderSection>
-      <MainLogoSection>
+      <MainLogoSection> 
         <Flex justifyContent="center">
           <img src="/images/home/phoenix.png" width="35%" alt="Phoenix" />
         </Flex>
@@ -102,10 +105,13 @@ const Hero = () => {
           <img src="/images/home/play-button.png" width={280} alt="Play now" />
         </Flex>
         <Flex justifyContent="center" mt={32} mb={32}>
-          <CustomFontText fontSize='48px'>CHARACTERS</CustomFontText>
+          <CustomFontText fontSize="48px">CHARACTERS</CustomFontText>
         </Flex>
-        <Flex justifyContent="center">
+        {/* <Flex justifyContent="center">
           <img src="/images/home/horse/Grayhorse_Trans_1.png" width={280} alt="Grayhorse Trans" />
+        </Flex> */}
+        <Flex justifyContent="center">
+          <SwiperCharacter />
         </Flex>
       </MainLogoSection>
     </IntroBackground>
