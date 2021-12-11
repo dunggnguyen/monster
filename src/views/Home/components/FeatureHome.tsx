@@ -111,9 +111,11 @@ const FeatureHome = () => {
         </Flex>
         <Flex justifyContent="center" mt={64}>
           <Flex flex={4} justifyContent="flex-end">
-            <img src="/images/home/list-horse.png" width="60%" alt="Phoenix" />
+            <img src="/images/home/list-horse.png" width="70%" alt="Phoenix" />
           </Flex>
-          <Flex flex={3}>Text</Flex>
+          <Flex flex={4}>
+            <img src="/images/home/marketplace-2.png" width="70%" alt="Phoenix" />
+          </Flex>
         </Flex>
       </HeaderSection>
       <HeaderSection>

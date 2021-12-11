@@ -110,7 +110,7 @@ const Hero = () => {
         {/* <Flex justifyContent="center">
           <img src="/images/home/horse/Grayhorse_Trans_1.png" width={280} alt="Grayhorse Trans" />
         </Flex> */}
-        <Flex justifyContent="center">
+        <Flex justifyContent="center" flexDirection='column'>
           <SwiperCharacter />
         </Flex>
       </MainLogoSection>
